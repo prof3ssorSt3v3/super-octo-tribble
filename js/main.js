@@ -76,15 +76,19 @@ function saveFiles(ev) {
     .then((txt) => {
       let f = new File([txt], `${id}.js`, { type: 'application/javascript' });
       let url = URL.createObjectURL(f);
+      // <script src="${url}">
       return import(url); //async too
+      //dynamic import method... like import * as MOD from 'asdfs.js'
     })
     .then((mod) => {
+      //mod is a module object which contains a list of exported things
       const funcs = [];
       for (let f in mod) {
         funcs.push(f);
       }
       let selected = Math.floor(Math.random() * funcs.length);
       mod[funcs[selected]]();
+      //run the function from inside the imported module
       document.querySelector('form').reset(); //only one form on the page
     })
     .catch((err) => {
@@ -136,7 +140,7 @@ function showAllJSON(version) {
         // return item instanceof Blob;
         // });
         let df = new DocumentFragment();
-        const imgArr = [];
+
         objects.forEach((obj) => {
           let p = document.createElement('p');
           let img = document.createElement('img');
@@ -176,7 +180,7 @@ function showAllJSON(version) {
         console.log('step 3');
         //the json objects for building the html
         let df = new DocumentFragment();
-        const imgArr = [];
+
         objects.forEach((obj) => {
           let p = document.createElement('p');
           let img = document.createElement('img');
