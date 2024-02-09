@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+html {
+  font-size: 20px;
+  font-weight: 400;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+header {
+  position: fixed;
+  z-index: 10;
+  background-color: steelblue;
+  height: 100px;
+  width: 100vw;
+}
+.content p {
+  padding: 1rem 2rem;
+}
+.form {
+  position: fixed;
+  z-index: 20;
+  top: 100px;
+  min-height: 200px;
+  background-color: #d4d4d4;
+  padding-inline: 1rem;
+  width: 100vw;
+}
+.content {
+  padding-top: 300px;
+  padding-inline: 2rem;
+}
+.card {
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  background-color: cornflowerblue;
+  color: white;
+}
+.card img {
+  width: 300px;
+  margin: 1rem;
+  vertical-align: middle;
+}

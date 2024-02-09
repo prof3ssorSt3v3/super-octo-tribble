@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saving Files and updating HTML</title>
+    <script src="js/main.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Caching Files</h1>
+    </header>
+
+    <main>
+      <section class="form">
+        <form id="userForm">
+          <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+          </p>
+          <p>
+            <label for="script">Script</label>
+            <input type="file" id="script" name="script" accept="text/javascript,application/javascript" />
+          </p>
+          <p>
+            <label for="image">Image</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+          </p>
+          <p>
+            <button id="btnSave">Save Stuff</button>
+          </p>
+        </form>
+      </section>
+      <section class="content">
+        <!-- Add content here -->
+        <p>Target for script functions</p>
+      </section>
+    </main>
+    <dialog id="err">
+      <h1>Hey User</h1>
+      <p></p>
+    </dialog>
+  </body>
+</html>
